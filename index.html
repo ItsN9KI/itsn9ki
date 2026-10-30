@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="N9KI – Gaming, Projekte und Content.">
+  <title>N9KI | Creator Website</title>
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --panel: #14141b;
+      --panel2: #1b1b24;
+      --text: #f3f3f6;
+      --muted: #a0a0ad;
+      --line: #292933;
+      --accent: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: radial-gradient(ellipse at 50% -15%, #242039 0, var(--bg) 48%);
+      color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+      min-height: 100vh; padding-bottom: 92px;
+    }
+    .wrap { width: min(960px, calc(100% - 36px)); margin: auto; }
+    header { padding: 28px 0; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-weight: 900; letter-spacing: .16em; font-size: 1.15rem; }
+    .status { color: var(--muted); font-size: .8rem; letter-spacing: .08em; }
+    .hero { padding: 82px 0 70px; text-align: center; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .22em; font-size: .72rem; font-weight: 700; }
+    h1 { font-size: clamp(3.4rem, 10vw, 6.5rem); margin: 14px 0 8px; letter-spacing: -.07em; line-height: 1; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; }
+    .hero-links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    a.button, button.button {
+      display:inline-flex; align-items:center; justify-content:center; padding:12px 20px;
+      border-radius:12px; border:1px solid var(--line); color:var(--text); text-decoration:none;
+      background:var(--panel2); font:inherit; cursor:pointer;
+    }
+    a.button.primary { background:var(--text); color:#101014; border-color:var(--text); font-weight:700; }
+    main { padding-bottom: 30px; }
+    .view { display:none; animation: fade .22s ease; }
+    .view.active { display:block; }
+    @keyframes fade { from {opacity:0; transform:translateY(5px)} to {opacity:1; transform:translateY(0)} }
+    .section-head { margin: 12px 0 24px; }
+    h2 { font-size: clamp(1.8rem, 5vw, 2.5rem); margin: 0 0 8px; letter-spacing:-.04em; }
+    .section-head p, .muted { color:var(--muted); line-height:1.7; }
+    .grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; }
+    .card { background:linear-gradient(145deg, var(--panel), #101016); border:1px solid var(--line); border-radius:18px; padding:22px; }
+    .card h3 { margin:0 0 10px; }
+    .card p { color:var(--muted); line-height:1.65; margin:0; }
+    .placeholder { color:#d5c9ff; }
+    .detail-list { display:grid; gap:10px; }
+    .detail-row { display:flex; justify-content:space-between; gap:20px; padding:13px 0; border-bottom:1px solid var(--line); }
+    .detail-row span:first-child { color:var(--muted); }
+    .detail-row span:last-child { text-align:right; }
+    .legal { max-width:720px; }
+    .legal h3 { margin-top:28px; }
+    .legal p { color:var(--muted); line-height:1.7; }
+    footer { text-align:center; color:var(--muted); font-size:.8rem; padding:26px 0 8px; }
+    .bottom-nav {
+      position:fixed; z-index:10; bottom:16px; left:50%; transform:translateX(-50%);
+      width:min(680px, calc(100% - 24px)); display:flex; justify-content:space-around; gap:4px;
+      padding:8px; background:rgba(20,20,27,.92); border:1px solid #343440;
+      border-radius:18px; backdrop-filter:blur(16px); box-shadow:0 12px 40px #0008;
+    }
+    .nav-btn {
+      border:0; background:transparent; color:var(--muted); padding:11px 13px;
+      border-radius:12px; font:inherit; font-size:.82rem; cursor:pointer; flex:1;
+    }
+    .nav-btn.active { background:#292735; color:var(--text); }
+    @media (max-width:620px) {
+      .grid { grid-template-columns:1fr; }
+      .hero { padding:64px 0 54px; }
+      .bottom-nav { overflow-x:auto; justify-content:flex-start; }
+      .nav-btn { flex:0 0 auto; }
+      .detail-row { flex-direction:column; gap:4px; }
+      .detail-row span:last-child { text-align:left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">N9KI</div>
+      <div class="status">GAMING · CONTENT · PROJECTS</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Welcome to my corner</div>
+      <h1>N9KI</h1>
+      <div class="subtitle">Gaming, eigene Projekte und Content.</div>
+      <div class="hero-links">
+        <a class="button primary" href="https://www.twitch.tv/" target="_blank" rel="noopener">Twitch</a>
+        <a class="button" href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </section>
+
+    <main>
+      <section class="view active" id="home">
+        <div class="section-head">
+          <h2>Hey, willkommen.</h2>
+          <p>Hier findest du alles rund um N9KI – von meinen Projekten bis zu meinem Setup.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Über mich</h3>
+            <p class="placeholder">Hier kommt eine kurze Vorstellung hin: Wer bin ich, welche Games spiele ich und was erwartet dich auf meinen Kanälen?</p>
+          </article>
+          <article class="card">
+            <h3>Was ich mache</h3>
+            <p class="placeholder">Streams, Videos und kleine Gaming-Projekte. Weitere Infos und aktuelle Inhalte folgen hier.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="about">
+        <div class="section-head"><h2>Über mich</h2><p>Ein paar Informationen über den Creator hinter N9KI.</p></div>
+        <article class="card">
+          <p class="placeholder">Diesen Bereich können wir mit deiner eigenen Vorstellung füllen – kurz, locker und ohne unnötiges Marketing-Blabla.</p>
+        </article>
+      </section>
+
+      <section class="view" id="setup">
+        <div class="section-head"><h2>Mein Setup</h2><p>Die Hardware und das Equipment, das ich verwende.</p></div>
+        <article class="card detail-list">
+          <div class="detail-row"><span>Prozessor</span><span class="placeholder">Wird ergänzt</span></div>
+          <div class="detail-row"><span>Grafikkarte</span><span class="placeholder">Wird ergänzt</span></div>
+          <div class="detail-row"><span>Arbeitsspeicher</span><span class="placeholder">Wird ergänzt</span></div>
+          <div class="detail-row"><span>Mikrofon / Headset</span><span class="placeholder">Wird ergänzt</span></div>
+          <div class="detail-row"><span>Maus / Tastatur</span><span class="placeholder">Wird ergänzt</span></div>
+        </article>
+      </section>
+
+      <section class="view" id="projects">
+        <div class="section-head"><h2>Projekte</h2><p>Aktuelle und vergangene Gaming-Projekte.</p></div>
+        <div class="grid">
+          <article class="card"><h3>Projekt 01</h3><p class="placeholder">Hier können wir dein aktuelles Minecraft- oder Gaming-Projekt vorstellen.</p></article>
+          <article class="card"><h3>Projekt 02</h3><p class="placeholder">Weitere Projekte, Videos oder besondere Challenges.</p></article>
+        </div>
+      </section>
+
+      <section class="view" id="contact">
+        <div class="section-head"><h2>Kontakt</h2><p>Für geschäftliche oder sonstige Anfragen.</p></div>
+        <article class="card">
+          <p class="placeholder">Hier später eine passende Kontaktmöglichkeit eintragen, zum Beispiel eine separate geschäftliche E-Mail-Adresse.</p>
+        </article>
+      </section>
+
+      <section class="view legal" id="imprint">
+        <div class="section-head"><h2>Impressum</h2><p>Angaben gemäß § 5 DDG.</p></div>
+        <article class="card">
+          <p class="placeholder">[Vor- und Nachname]<br>[Ladungsfähige Anschrift]<br>[PLZ und Ort]</p>
+          <h3>Kontakt</h3>
+          <p class="placeholder">E-Mail: [deine geschäftliche E-Mail-Adresse]</p>
+          <p class="muted">Bitte vor Veröffentlichung vollständig und rechtlich passend ausfüllen. Die Angaben hier sind nur Platzhalter.</p>
+        </article>
+      </section>
+
+      <section class="view legal" id="privacy">
+        <div class="section-head"><h2>Datenschutz</h2><p>Informationen zur Verarbeitung personenbezogener Daten.</p></div>
+        <article class="card">
+          <p class="placeholder">Hier muss eine Datenschutzerklärung stehen, die zu den tatsächlich verwendeten Funktionen und Diensten dieser Website passt.</p>
+          <p class="muted">Nicht ungeprüft als fertige Datenschutzerklärung veröffentlichen. Eingebundene Dienste, Cookies, externe Inhalte und Hosting müssen berücksichtigt werden.</p>
+        </article>
+      </section>
+    </main>
+    <footer>© <span id="year"></span> N9KI</footer>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Seitennavigation">
+    <button class="nav-btn active" data-view="home">Start</button>
+    <button class="nav-btn" data-view="about">Über mich</button>
+    <button class="nav-btn" data-view="setup">Setup</button>
+    <button class="nav-btn" data-view="projects">Projekte</button>
+    <button class="nav-btn" data-view="contact">Kontakt</button>
+    <button class="nav-btn" data-view="imprint">Impressum</button>
+    <button class="nav-btn" data-view="privacy">Datenschutz</button>
+  </nav>
+
+  <script>
+    const buttons = document.querySelectorAll(".nav-btn");
+    const views = document.querySelectorAll(".view");
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.view;
+        views.forEach(view => view.classList.toggle("active", view.id === target));
+        buttons.forEach(item => item.classList.toggle("active", item === button));
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
